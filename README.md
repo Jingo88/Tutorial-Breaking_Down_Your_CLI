@@ -4,9 +4,9 @@ I'm consolidating some/all of the commands I use when working in the CLI. I'll t
 
 ##### [I. Navigating Your CLI](#nav)
 ##### [II. Secure Copy Files](#scp)
-##### [III. What is YUM And How To Install Things](#zip)
-##### IV. Zipping and Unzipping
-##### V. Back Up A Directory
+##### [III. What is YUM And How To Install Things](#yum)
+##### [IV. Zipping and Unzipping](#zip)
+##### [V. Back Up A Directory](#back)
 
 ### <a name=nav>Navigating Your CLI</a>
 Before doing anything inside your Command Line Interface you should know how to navigate between folders in your terminal. Move between folders, copy paste, remove, and the like. Here are some of the more common commands I use commandes:	
@@ -81,7 +81,7 @@ scp -i Desktop/pemkey opt/apps/Middleware 127.0.0.1:/tmp
 (You can also copy whole folders, but you will need an option to make sure the process runs and copies all the files in the folder)
 
 scp -i Desktop/pemkey opt/apps/Middleware -r 127.0.0.1:/tmp
-(The only difference here is the "-r" which means to recursively copy all the files)```### YUM Installs
+(The only difference here is the "-r" which means to recursively copy all the files)```### <a name=yum>YUM Installs</a>
 You may be asking yourself "What is YUM?" That's a good question. You should google it. But incase you are too lazy I'll give you a short breakdown. 
 
 YUM = Yellowdog Updater, Modified. It is a package manager for Linux operating systems. (Think of how you use npm in node, or install gems in ruby). YUM can install, delete, and update packages. Some examples are 
@@ -102,7 +102,7 @@ Examples:
 * zip filename.zip file1 file2 file3 target_directory
 * unzip filename.zip
 * unzip filename.zip -d target/directory/path
-```### Back Up A Directory
+```### <a name=back>Back Up A Directory</a>
 Pretty much exactly what the title says. Just back up your stuff every once in awhile so if you make changes and destroy your processes you have a image to go back to. 
 
 ```
