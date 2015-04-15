@@ -6,7 +6,7 @@ I'm consolidating some/all of the commands I use when working in the CLI. I'll t
 ##### II. Secure Copy Files
 ##### III. What is YUM And How To Install Things
 ##### IV. Zipping and Unzipping
-##### V. Backing Up Your Data
+##### V. Back Up A Directory
 
 ### Navigating Your CLI
 Before doing anything inside your Command Line Interface you should know how to navigate between folders in your terminal. Move between folders, copy paste, remove, and the like. Here are some of the more common commands I use commandes:	
@@ -81,37 +81,59 @@ scp -i Desktop/pemkey opt/apps/Middleware 127.0.0.1:/tmp
 (You can also copy whole folders, but you will need an option to make sure the process runs and copies all the files in the folder)
 
 scp -i Desktop/pemkey opt/apps/Middleware -r 127.0.0.1:/tmp
-(The only difference here is the "-r" which means to recursively copy all the files)```### Zipping and Unzipping
-* zip filename.zip targetdirectory/*
-* zip filename.zip file1 file2 file3
-* unzip filename.zip
-* unzip filename.zip -d target/directory/path
-* zip filename.zip file1 file2 file3
-* sudo yum install unzip
-
-### YUM Installs
+(The only difference here is the "-r" which means to recursively copy all the files)```### YUM Installs
 You may be asking yourself "What is YUM?" That's a good question. You should google it. But incase you are too lazy I'll give you a short breakdown. 
 
-YUM = Yellowdog Updater, Modified. It is a package manager for Linux operating systems. (Think of how you can npm install things when running node). YUM can install, delete, and update packages. Some examples are 
+YUM = Yellowdog Updater, Modified. It is a package manager for Linux operating systems. (Think of how you use npm in node, or install gems in ruby). YUM can install, delete, and update packages. Some examples are 
 
+```
 * yum install unzip
 * yum install xclock
-* yum update xauth### Backing up a directory
+* yum update xauth```
+### Zipping and Unzipping
+After installing the zip and unzip capability using yum install, you can use this to... (drumroll) zip and unzip files/directories!
 
-* ps aux | grep name
-* find / -name searchingfor
-* tar cvfz backupOfMiddleware.tgz Middleware/
-* To restore the Middleware if deployment installations go wrong
-* rm –rf the middleware folder
-* tar xvf backupFileName –C target directory### Environmental Variables and Shortcuts
+```
+* sudo yum install unzip
+(sudo just allows you root power if you are not in the root user)
+
+Examples: 
+(You can zip and unzip one or multiple files)* zip filename.zip target_directory
+* zip filename.zip file1 file2 file3 target_directory
+* unzip filename.zip
+* unzip filename.zip -d target/directory/path
+```### Back Up A Directory
+Pretty much exactly what the title says. Just back up your stuff every once in awhile so if you make changes and destroy your processes you have a image to go back to. 
+
+```
+Example:
+(Lets go find a folder you want to backup)
+
+cd opt/apps/Middleware
+ls
+(returns bottomwear)
+
+tar cvfz backupBottomwear.tgz bottomwear
+(tar [options] [name of zip file to create] [directory you are zipping])
+```
+
+But what happens when you make changes to your server that messes up everything in your bottomwear folder. Here's how to restore from the backup zip file
+
+```
+destroy your current folder (if you no longer want it at all)
+rm -rf bottomwear
+
+tar xvf backupBottomwear.tgz -C bottomwear
+(tar [options] [zip file restoring from] [options] [where toe put restore])
+```### Environmental Variables and Shortcuts
 * env | sort
 * export variable_name=what is this variable
 * export HOME_PATH=/home/blah/asdf/boom
 * cd $HOME_PATH
-* ### Command Line Navigation
-### Making Users
+* ### Making Users
 * mkuser
 * password### Giving access and ownership
-
 * chown
 * chmod### Log file navigation
+* tail -f filename
+* tail -h filename
