@@ -4,7 +4,7 @@ I'm consolidating some/all of the commands I use when working in the CLI. I'll t
 
 ##### I. Navigating Your CLI
 ##### II. Secure Copy Files
-##### <a name="abcd">III. What is YUM And How To Install Things</a>
+##### [III. What is YUM And How To Install Things](#zip)
 ##### IV. Zipping and Unzipping
 ##### V. Back Up A Directory
 
@@ -90,7 +90,7 @@ YUM = Yellowdog Updater, Modified. It is a package manager for Linux operating s
 * yum install unzip
 * yum install xclock
 * yum update xauth```
-### [Zipping and Unzipping](#abcd)
+### <a name=zip>Zipping and Unzipping </a>
 After installing the zip and unzip capability using yum install, you can use this to... (drumroll) zip and unzip files/directories!
 
 ```
