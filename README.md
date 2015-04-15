@@ -1,10 +1,12 @@
-# Useful Commands for your Command Line
+# Breaking Down Your Command Line Interface
 
 I'm consolidating some/all of the commands I use when working in the CLI. I'll try to keep this somewhat organized in sections so feel free to browse through the table of contents. I'm working on organization and formatting, if it seems too messy for you to look at come back at a later time. Or do your own research!
 
-##### I. Navigating Directories In The CLI
-##### II. What is YUM And How To Install Things
-##### III. 
+##### I. Navigating Your CLI
+##### II. Secure Copy Files
+##### III. What is YUM And How To Install Things
+##### IV. Zipping and Unzipping
+##### V. Backing Up Your Data
 
 ### Navigating Your CLI
 Before doing anything inside your Command Line Interface you should know how to navigate between folders in your terminal. Move between folders, copy paste, remove, and the like. Here are some of the more common commands I use commandes:	
