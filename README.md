@@ -2,13 +2,13 @@
 
 I'm consolidating some/all of the commands I use when working in the CLI. I'll try to keep this somewhat organized in sections so feel free to browse through the table of contents. I'm working on organization and formatting, if it seems too messy for you to look at come back at a later time. Or do your own research!
 
-##### I. Navigating Your CLI
-##### II. Secure Copy Files
+##### [I. Navigating Your CLI](#nav)
+##### [II. Secure Copy Files](#scp)
 ##### [III. What is YUM And How To Install Things](#zip)
 ##### IV. Zipping and Unzipping
 ##### V. Back Up A Directory
 
-### Navigating Your CLI
+### <a name=nav>Navigating Your CLI</a>
 Before doing anything inside your Command Line Interface you should know how to navigate between folders in your terminal. Move between folders, copy paste, remove, and the like. Here are some of the more common commands I use commandes:	
 
 * ls - This will list all of the files and folders in your current directory
@@ -69,7 +69,7 @@ find / -name server.js
 (this will return all the "pwd"s of any location with a file name "server.js")
 ```
 
-### Secure Copy FilesYou've seen the "cp" command up top, but what if you want to send something up to a server without going through a third party. An example would be sending a JSON file containing API keys up to your Digital Ocean box without going through Github. Why? Because you DO NOT want your API keys up there viewable by others. 
+### <a name=scp>Secure Copy Files</a>You've seen the "cp" command up top, but what if you want to send something up to a server without going through a third party. An example would be sending a JSON file containing API keys up to your Digital Ocean box without going through Github. Why? Because you DO NOT want your API keys up there viewable by others. 
 ```
 scp [options] (source where the file is) (target destination)
 
