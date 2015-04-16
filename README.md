@@ -67,6 +67,13 @@ mv pants.html bottoms.html
 Example:
 find / -name server.js
 (this will return all the "pwd"s of any location with a file name "server.js")
+
+(If you are receiving a lot of "permission denied" lines because you are not in root access, you can streamline this using the following command.)
+
+find / -name server.js 2>/dev/null
+
+(The "2>/dev/null" is taking all the errors you just saw and passing them to the null folder)
+
 ```
 
 NOTE: Some environments will have short cut commands. Such as "ll" will be the same as "ls -l". If your current environment do not have these short cuts you can add them to the bash profile yourself. You can learn more about your Bash Profile from my other tutorial.
