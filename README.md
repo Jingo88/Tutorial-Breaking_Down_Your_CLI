@@ -12,7 +12,7 @@ I'm consolidating some/all of the commands I use when working in the CLI. I'll t
 Before doing anything inside your Command Line Interface you should know how to navigate between folders in your terminal. Move between folders, copy paste, remove, and the like. Here are some of the more common commands I use commandes:	
 
 * ls - This will list all of the files and folders in your current directory
-* ls -l - This will list all the files and folders in your current directory as well as the groups and users that own those files (in some environments a simple "ll" will do instead of "ls -l")
+* ls -l - This will list all the files and folders in your current directory as well as the groups and users that own those files
 * pwd - print working directory. typing this command will give your the directory you are currently in along with all the folders above your current view 
 * cd (target)- change directory. Your main command to moving between folders
 * cd - you can also just type cd by itself and it will lead you to your home directory
@@ -68,6 +68,13 @@ Example:
 find / -name server.js
 (this will return all the "pwd"s of any location with a file name "server.js")
 ```
+
+NOTE: Some environments will have short cut commands. Such as "ll" will be the same as "ls -l". If your current environment do not have these short cuts you can add them to the bash profile yourself. You can learn more about your Bash Profile from my other tutorial.
+
+```
+https://github.com/Jingo88/Tutorial-How_To_VIM_Bash_and_SSHConfig
+```
+
 
 ### <a name=scp>Secure Copy Files</a>You've seen the "cp" command up top, but what if you want to send something up to a server without going through a third party. An example would be sending a JSON file containing API keys up to your Digital Ocean box without going through Github. Why? Because you DO NOT want your API keys up there viewable by others. 
 ```
