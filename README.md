@@ -11,8 +11,17 @@ I'm consolidating some/all of the commands I use when working in the CLI. I'll t
 ### <a name=nav>Navigating Your CLI</a>
 Before doing anything inside your Command Line Interface you should know how to navigate between folders in your terminal. Move between folders, copy paste, remove, and the like. Here are some of the more common commands I use commandes:	
 
-* ls - This will list all of the files and folders in your current directory
-* ls -l - This will list all the files and folders in your current directory as well as the groups and users that own those files
+* ls - List Settings. This will list all of the files and folders in your current directory
+
+```
+List Settings Options:
+
+* ls -l - Displays all the information about the files and directories
+* ls -t - This will return the last edited file
+* ls -t | head - This will return the last TEN edited files
+* ls -lt - List all the files based on last modified
+* 
+```
 * pwd - print working directory. typing this command will give your the directory you are currently in along with all the folders above your current view 
 * cd (target)- change directory. Your main command to moving between folders
 * cd - you can also just type cd by itself and it will lead you to your home directory
